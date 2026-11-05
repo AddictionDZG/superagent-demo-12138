@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="timer-card" aria-labelledby="app-title">
+        <p class="eyebrow">单页番茄钟</p>
+        <h1 id="app-title">Pomodoro Timer</h1>
+        <p class="description">25 分钟专注，5 分钟休息；支持开始、暂停和重置。</p>
+
+        <div class="session-status" aria-live="polite">
+          <span id="mode-label">专注中</span>
+        </div>
+
+        <div class="time-display" role="timer" aria-live="assertive" aria-atomic="true">
+          <span id="minutes">25</span>
+          <span class="separator">:</span>
+          <span id="seconds">00</span>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <div class="controls">
+          <button id="start-pause-button" type="button">开始</button>
+          <button id="reset-button" type="button" class="secondary">重置</button>
+        </div>
+
+        <dl class="session-details">
+          <div>
+            <dt>当前阶段</dt>
+            <dd id="phase-detail">专注</dd>
+          </div>
+          <div>
+            <dt>下一阶段</dt>
+            <dd id="next-phase-detail">休息</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
